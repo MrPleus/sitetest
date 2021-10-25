@@ -1,0 +1,101 @@
+@media screen and (max-width: 780px) {
+    /*BODY*/
+    .body-section{
+        display: block;
+    }
+    .main-body{
+        width: 100%;
+        height: 340px;
+        margin: 10px 0 10px 0;
+    }
+
+    .sidebar{
+        width: 100%;
+        height: 100%;
+        position: relative;
+
+    }
+
+
+    /*LOGO*/
+    .logo{
+        width: 100%;
+        text-align: center;
+    }
+
+
+    /*NAVIGATION*/
+    .navlinks{
+        position: absolute;
+        top: 9vh;
+        width: 100%;
+        flex-direction: column;
+        background-color: rgba(87, 0, 78, 0.13);
+        margin-top: 0;
+        padding-left: 0;
+        height: 91vh;
+        justify-content: flex-start;
+        transform: translateX(-100%);
+        transition: all 0.5s ease;
+        }
+
+
+        .navlinks.change{
+            transform: translateX(0%);
+        }
+
+
+        .navlinks li{
+            padding: 10px 0px;
+            margin: 10px;
+        }
+
+        
+
+        /*SEARCH*/
+
+        .right-nav{
+            width: 0;
+        }
+
+
+        .search{
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+
+
+        /* BURGER */
+    .burger{
+        color: white;
+        position: absolute;
+        top: 13px;
+        left: 10px;
+    }
+    
+    .lines{
+        border-radius: 5px;
+        font-size: 36px;
+        width: 25px;
+        height: 2px;
+        background-color: rgb(255, 255, 255);
+        transition: all 0.4s ease;
+    }
+
+    .active .lines1{
+        transform: rotate(45deg) translate(4px, 4px);
+    }
+
+    .active .lines2{
+        opacity: 0;
+    }
+
+
+    .active .lines3{
+        transform: rotate(-45deg) translate(4px, -5px);
+    }
+        
+
+        
+}

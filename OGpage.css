@@ -1,0 +1,281 @@
+/*Base Responsive*/
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box ;
+    background-color: rgb(20, 0, 17);
+}
+
+.header{
+    width: 100%;
+    background-color: red;
+    color: white;
+    display: flex;
+    align-items: center;
+    background-color: black;
+}
+
+/*LOGO*/
+.logo{
+    width: 100%;
+    text-align: center;
+}
+
+.logo img{
+    width: 150px;
+    color: white;
+    padding-left: 20px;
+    padding-top: 10px;
+    padding-bottom: 5px;
+}
+
+/*NAVIGATION*/
+.navlinks{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.navlinks li{
+    list-style: none;
+    padding: 0px 12px;
+}
+
+.navlinks li a{
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+    padding: 2px 6px;
+    font-family: 'Roboto', sans-serif;
+    transition: all 0.4s ease;
+}
+
+.navlinks li a:hover{
+    border-radius: 5px;
+    border: 2px solid rgb(87, 0, 79);
+}
+
+/*SEARCH*/
+.right-nav{
+    width: 20%;
+}
+
+.search{
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    background-color: rgb(66, 38, 63);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 0.4s ease;
+}
+
+.search:hover{
+    background-color: rgb(87, 0, 79);
+}
+
+.search i{
+    color: white;
+}
+
+/*MENU*/
+.burger{
+    color: white;
+    position: absolute;
+    top: 13px;
+    left: 10px;
+}
+
+.lines{
+    border-radius: 5px;
+    margin: 5px;
+    font-size: 36px;
+    width: 25px;
+    height: 2px;
+    max-width: 4px 0px;
+    background-color: rgb(255, 255, 255);
+}
+   
+
+/*BODY*/
+.body-section{
+    display: flex;
+    margin: 10px 10px;
+}
+
+
+.sidebar{
+    width: 40%;
+    height: 530px;
+    background-color: transparent;
+}
+
+
+.s2{
+    background-color: turquoise;
+}
+
+
+.main-body{
+    width: 60%;
+    height: 530px;
+    border-radius: 20px;
+    margin: 0 10px 0 10px;
+    background-color: yellow;
+    text-align: center;
+}
+
+
+.footer{
+    width: 100%;
+    height: 80px;
+    border-radius: 20px;
+    background-color: rgb(17, 0, 255);
+    color: white;
+    text-align: center;
+}
+
+/*SKILLS*/
+@import url();
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+.skills{
+    display: grid;
+    height: 100%;
+    width: 100%;
+    place-items: center;
+}
+
+.skills-bar{
+    width: 100%;
+    border-radius: 10px;
+    padding: 25px 30px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.skills-bar .bar{
+    margin: 20px 0;
+}
+
+.skills-bar .bar:first-child{
+    margin-top: 0px;
+}
+
+
+.skills-bar .bar .info{
+    margin-bottom: 5px;
+}
+
+.skills-bar .bar .info span{
+    color: white;
+    font-size: 17px;
+    font-weight: 500;
+    opacity: 0;
+    animation: showText.5s 1s linear forwards;
+}
+
+@keyframes showText {
+    100%{
+        opacity: 1;
+    }
+    
+}
+
+.skills-bar .bar .progress-line{
+    position: relative;
+    border-radius: 10px;
+    height: 10px;
+    width: 100%;
+    background: rgb(201, 201, 201);
+    transform: scaleX(0);
+    transform-origin: left;
+    box-shadow: inset 0px 1px 1px rgb(0,0,0,0.05),
+                      0px 1px rgb(255,255,255,255.08);
+    animation: animate 1s cubic-bezier(1,0,0.5,1) forwards;
+}
+
+.bar .progress-line span{
+    height: 100%;
+    width: 80%;
+    background: violet;
+    position: absolute;
+    border-radius: 10px;
+    transform: scaleX(0);
+    transform-origin: left;
+    animation: animate 1s 1s cubic-bezier(1,0,0.5,1) forwards;
+}
+
+@keyframes animate {
+    100%{
+        transform: scaleX(1);  
+    }
+}
+
+.progress-line.Photoshop span{
+    width: 90%;
+}
+
+.progress-line.Illustrator span{
+    width: 70%;
+}
+
+.progress-line.Website span{
+    width: 50%;
+}
+
+.bar .progress-line span::before{
+    position: absolute;
+    content: "";
+    right: 0;
+    top: -10px;
+    height: 0;
+    width: 0;
+    border: 7px solid transparent;
+    border-bottom-width: 0px;
+    border-right-width: 0px;
+    border-top-color: black;
+    opacity: 0;
+    animation: showText2 0.5s 1.5s linear forwards;
+}
+
+.bar .progress-line span::after{
+    position: absolute;
+    right: 0;
+    top: -24px;
+    color: white;
+    font-size: 12px;
+    font-weight: 500;
+    background: black;
+    padding: 1px 8px;
+    border-radius: 3px;
+    opacity: 0;
+    animation: showText2 0.5s 1.5s linear forwards;
+}
+
+@keyframes showText2 {
+    100%{
+        opacity: 1;
+    }
+    
+}
+
+.progress-line.Photoshop span::after{
+    content: "90%";
+}
+
+.progress-line.Illustrator span::after{
+    content: "70%";
+}
+
+.progress-line.Website span::after{
+    content: "50%";
+}
